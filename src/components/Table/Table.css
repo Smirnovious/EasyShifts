@@ -1,0 +1,22 @@
+table {
+    border: 3px solid black;
+    margin: 30px auto;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 8px;
+  }
+  
+  td {
+    text-align: center;
+    margin: 2px 0;
+    font-family: david;
+    color:blue;
+    
+  }
+  
+  th {
+    text-decoration: underline;
+    padding: 15px;
+    font-family: david;
+    font-size: 24px;
+  }

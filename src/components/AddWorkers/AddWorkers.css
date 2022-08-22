@@ -1,0 +1,17 @@
+.addedWorkers{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 3px 8px;
+    font-size: 50px;
+}
+
+.worker-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
