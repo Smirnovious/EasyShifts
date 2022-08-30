@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+/* eslint-disable no-unused-vars */
+import React, {useState} from 'react'
 import './SubmitShifts.css' 
 import {supabase} from '../../supabaseClient'
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
@@ -6,6 +7,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 //Sweet Alert Library
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+// eslint-disable-next-line no-unused-vars
 const MySwal = withReactContent(Swal)
 
 export const SubmitShifts = () => {
@@ -28,13 +30,14 @@ const handleSubmit = async (e) => {
                 });
                 
             for(let i = 0; i < workerPref.length; i++){
-            let { data: Shifts, error } = await supabase
+            let { data: Shifts } = await supabase
             .from(role === 'mokdan' ? "Shifts" : "Shifts_Ahmashim")
             .select('WorkersArray').eq('id', String(workerPref[i]))
             let newWorkersArray = Shifts[0].WorkersArray
             // if inside the first if...else to see if the worker is already in the array
             if (newWorkersArray === null){
                 newWorkersArray = user
+                // eslint-disable-next-line no-unused-vars
                 const { data, error } = await supabase
                 .from(role === 'mokdan' ? "Shifts" : "Shifts_Ahmashim")
                 .insert([
@@ -57,7 +60,7 @@ const handleSubmit = async (e) => {
             icon: 'error',
             title: 'שגיאה',
             text: 'אנא לכתוב שם פרטי + תפקיד ולהגיש 3 משמרות לפחות!',
-            footer: '<a href="">להתקשר לרומן באמצע הלילה שיפתור את הבעיה</a>'
+            
           })}
         };
 
