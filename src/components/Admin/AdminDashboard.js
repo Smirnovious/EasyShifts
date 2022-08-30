@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import {Table} from '../Table/Table'
 import {supabase} from '../../supabaseClient'
@@ -29,21 +30,19 @@ export const AdminDashboard = ({user}) => {
   getAhmashimFromAPI();
 }, [])
 
-  const putWorkersToWork = (e) => {
-    e.preventDefault();
-    for(let i = 0; i < mokdanim.length; i++) {
-      let mokdanIndex = Math.floor(Math.random() * mokdanim[i].WorkersArray.length);
-        //console.log(`Mokdan working in Shift ${mokdanim[i].id} is ${mokdanim[i].WorkersArray[mokdanIndex]}`);
-      let ahmashIndex = Math.floor(Math.random() * ahmashim[i].WorkersArray.length);
-      //console.log(`Ahmash working in Shift ${ahmashim[i].id} is ${ahmashim[i].WorkersArray[ahmashIndex]}`);
-      //const filterShift = mokdanim.filter(shift => shift[0].WorkersArray === mokdanim[i].id);
-      console.log(mokdanim[i].id);
+  // const putWorkersToWork = (e) => {
+  //   e.preventDefault();
+  //   for(let i = 0; i < mokdanim.length; i++) {
+  //     let mokdanIndex = Math.floor(Math.random() * mokdanim[i].WorkersArray.length);
+  //       //console.log(`Mokdan working in Shift ${mokdanim[i].id} is ${mokdanim[i].WorkersArray[mokdanIndex]}`);
+  //     let ahmashIndex = Math.floor(Math.random() * ahmashim[i].WorkersArray.length);
+  //     //console.log(`Ahmash working in Shift ${ahmashim[i].id} is ${ahmashim[i].WorkersArray[ahmashIndex]}`);
+  //     //const filterShift = mokdanim.filter(shift => shift[0].WorkersArray === mokdanim[i].id);
+  //     console.log(mokdanim[i].id);
       
-      
-      
-      if(i % 3 === 0) {
+  //     if(i % 3 === 0) {
        
-      }}}
+  //     }}}
 
   const deleteWorkersDatabase = async (e) => {
     e.preventDefault(); 
@@ -64,7 +63,7 @@ export const AdminDashboard = ({user}) => {
     <>
     <h1>שלום, {user?.name}</h1>
     <Table 
-    putWorkersToWork={putWorkersToWork}
+    // putWorkersToWork={putWorkersToWork}
     deleteWorkersDatabase={deleteWorkersDatabase}
     />
     </>
