@@ -1,6 +1,6 @@
 import React from 'react'
 import './Table.css' 
-import {supabase} from '../../supabaseClient'
+
 
 export const Table = ({putWorkersToWork, deleteWorkersDatabase}) => {
 
